@@ -9,7 +9,7 @@ const saludo = (a, b) => {
   return a + b;
 }
 
-export const FirstApp = ({title}) => {
+export const FirstApp = ({title, subTitle}) => {
 
 
   return (
@@ -17,7 +17,7 @@ export const FirstApp = ({title}) => {
     <h1>{title}</h1>
     {/* <h1>{saludo(1,2)}</h1> */}
     {/* <code>{JSON.stringify(newMessage)}</code> */}
-    <p>dwd</p>
+    <p> {subTitle+1}</p>
     </>
   )
 }
