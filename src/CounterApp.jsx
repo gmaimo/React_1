@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 export const CounterApp = ({ value }) => {
 
+        console.log('render');
 
     const [ counter, setCounter ] = useState( value );
 
@@ -13,11 +14,17 @@ export const CounterApp = ({ value }) => {
         // setCounter( (c) => c + 1 )
     }
 
+    const handelSubstact = () => setCounter( counter - 1 );
+
+    const handelReset = () => setCounter( value );
+
     return (
         <>
             <h1>CounterApp</h1>
             <h2> { counter } </h2>
             <button onClick={ handelAdd }> +1 </button>
+            <button onClick={ handelSubstact }> -1 </button>
+            <button onClick={ handelReset }> Reset </button>
         </>
     );
   }
